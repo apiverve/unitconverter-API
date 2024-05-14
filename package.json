@@ -11,7 +11,7 @@
     "url": "git+https://github.com/apiverve/unitconverter-API.git"
   },
   "keywords": [
-    "unit converter"," unit conversion"," unit converter api"," unit conversion api"," unit converter tool"," unit conversion tool"," unit converter software"," unit conversion software"," unit converter service"," unit conversion service"," unit converter library"," unit conversion library"," unit converter sdk"," unit conversion sdk"," unit converter code"," unit conversion code"," unit converter script"," unit conversion script"," unit converter program"," unit conversion program"," unit converter application"," unit conversion application"," unit converter app"," unit conversion app"," unit converter tool"," unit conversion tool"," unit converter utility"," unit conversion utility"," unit converter helper"," unit conversion helper"," unit converter helper tool"," unit conversion helper tool"," unit converter helper software"," unit conversion helper software"," unit converter helper service"," unit conversion helper service"," unit converter helper library"," unit conversion helper library"," unit converter helper sdk"," unit conversion helper sdk"," unit converter helper code"," unit conversion helper code"," unit converter helper script"," unit conversion helper script"," unit converter helper program"," unit conversion helper program"," unit converter helper application"," unit conversion helper application"," unit converter helper app"," unit conversion helper app"," unit converter helper tool"," unit conversion helper tool"," unit converter helper utility"," unit conversion helper utility"," unit converter helper"," unit conversion helper"
+    "unit converter","unit conversion","unit converter api","unit conversion api","unit converter tool"
   ],
   "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
   "license": "MIT",
@@ -27,6 +27,6 @@
   "dependencies": {
     "node-fetch": "3.3.2",
     "promise": "^7.1.1",
-    "request": "^2.69.0"
+    "axios": "^0.15.3"
   }
 }
