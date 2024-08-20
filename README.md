@@ -94,7 +94,8 @@ api.execute(query, function (error, data) {
         "plural": "Kilograms"
       }
     }
-  }
+  },
+  "code": 200
 }
 ```
 
