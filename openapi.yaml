@@ -1,0 +1,95 @@
+openapi: 3.0.4
+info:
+  title: Unit Converter
+  description: Unit Converter is a simple tool for converting units. It returns the converted value.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/unitconverter:
+    get:
+      summary: Convert Units
+      description: Unit Converter is a simple tool for converting units. It returns the converted value.
+      operationId: unitconverter
+      parameters:
+      - name: value
+        in: query
+        schema:
+          type: number
+        required: true
+        description: The value to convert from (e.g., 100)
+        example: '100'
+      - name: from
+        in: query
+        schema:
+          type: string
+        required: true
+        description: 'The unit to convert from. Allowed values: lb, kg, oz, g, in, cm, ft, m, mi, km, yd, mm, cm2, m2, mi2, km2, yd2, mm2, c, f, k'
+        example: lb
+      - name: to
+        in: query
+        schema:
+          type: string
+        required: true
+        description: 'The unit to convert to. Allowed values: lb, kg, oz, g, in, cm, ft, m, mi, km, yd, mm, cm2, m2, mi2, km2, yd2, mm2, c, f, k'
+        example: kg
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  result:
+                    result: 45.36
+                    from: 100 lb
+                    to: kg
+                  unitDefinitions:
+                    from:
+                      abbr: lb
+                      measure: mass
+                      system: imperial
+                      singular: Pound
+                      plural: Pounds
+                    to:
+                      abbr: kg
+                      measure: mass
+                      system: metric
+                      singular: Kilogram
+                      plural: Kilograms
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
