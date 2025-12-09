@@ -1,0 +1,35 @@
+{
+  "name": "@apiverve/unitconverter",
+  "version": "1.1.12",
+  "description": "Unit Converter is a simple tool for converting units. It returns the converted value.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "example": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/unitconverter-api.git",
+    "directory": "npm"
+  },
+  "keywords": [
+    "unit converter", "unit conversion", "unit converter api", "unit conversion api", "unit converter tool"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/unitconverter-api/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/unitconverter?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.13.2"
+  }
+}
